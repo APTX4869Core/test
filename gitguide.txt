@@ -1,0 +1,11 @@
+git config --global user.name ""	输入用户名
+git config --global user.email ""	输入用户email
+git init							设置本地仓库
+git add .							添加本地仓库所有文件至git
+git commit -m ""					确认添加
+git status							Git状态
+git diff							Git修改
+git log								Git版本检查
+git reset --hard HEAD^				退回上一版本
+git reset --hard 版本号				退回《版本号》所在版本
+git reflog							Git所有操作版本号
