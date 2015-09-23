@@ -11,8 +11,8 @@ git reset --hard 版本号									退回《版本号》所在版本
 git reflog												Git所有操作版本号
 git checkout -- 文件名									丢弃工作区修改
 git reset HEAD file										丢弃暂存区修改
-cat 文件名												查看文件内容
-rm 文件名												删除文件
+cat 文件名												linux 查看文件内容
+rm 文件名												linux 删除文件
 git rm 文件名											在版本库中删除文件
 ssh-keygen -t rsa -C "youremail@example.com"			添加SSH Key
 git remote add origin git@github.com:APTX4869Core/test	添加远程库origin于git@github.com:APTX4869Core/test
@@ -21,6 +21,8 @@ git push -u origin master								推送本地master分支到origin里并关联
 git clone git@github.com:APTX4869Core/test.git			克隆远程库test到本地
 git checkout -b dev										跳转并创建dev分支
 git branch												查看所有分支
-git merge 分支名										将《分支名》合并到当前分支上
+git merge 分支名										快速将《分支名》合并到当前分支上
 git branch -d 分支名									将《分支名》删除
 git log --graph											查看分支合并图
+Ctrl+C													linux 终止程序
+git merge --no-ff (-m "")分支名							禁用快速合并进行合并
