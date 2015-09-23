@@ -31,3 +31,8 @@ git stash list											被储存工作现场列表
 git stash apply stash@{0}								恢复工作现场
 git stash drop stash@{0}								删除工作现场
 git stash pop stash@{0}									恢复并删除工作现场
+git branch -D											强行删除分支而不保存
+git remote -v											远程库详细情况
+git branch --set-upstream-to 远程库分支名 本地库分支名	关联远程库分支与本地库分支
+git checkout -b dev origin/分支名						创建远程库分支
+git pull												抓取远程库分支
