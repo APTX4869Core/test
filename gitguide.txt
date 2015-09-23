@@ -26,3 +26,8 @@ git branch -d 分支名									将《分支名》删除
 git log --graph											查看分支合并图
 Ctrl+C													linux 终止程序
 git merge --no-ff (-m "")分支名							禁用快速合并进行合并
+git stash												临时储存工作现场
+git stash list											被储存工作现场列表
+git stash apply stash@{0}								恢复工作现场
+git stash drop stash@{0}								删除工作现场
+git stash pop stash@{0}									恢复并删除工作现场
