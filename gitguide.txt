@@ -21,3 +21,5 @@ git push -u origin master								推送本地master分支到origin里并关联
 git clone git@github.com:APTX4869Core/test.git			克隆远程库test到本地
 git checkout -b dev										跳转并创建dev分支
 git branch												查看所有分支
+git merge 分支名										将《分支名》合并到当前分支上
+git branch -d 分支名									将《分支名》删除
