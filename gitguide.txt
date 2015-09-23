@@ -18,3 +18,6 @@ ssh-keygen -t rsa -C "youremail@example.com"			添加SSH Key
 git remote add origin git@github.com:APTX4869Core/test	添加远程库origin于git@github.com:APTX4869Core/test
 git remote rm origin									移除远程库origin
 git push -u origin master								推送本地master分支到origin里并关联
+git clone git@github.com:APTX4869Core/test.git			克隆远程库test到本地
+git checkout -b dev										跳转并创建dev分支
+git branch												查看所有分支
