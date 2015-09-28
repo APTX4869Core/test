@@ -1,0 +1,80 @@
+www.baby012.com/index.php?c=控制器 ?a=方法
+
+
+
+index文件
+<?php
+    //这是入口文件index.php
+	header{“Content-Type:text/html;charset=utf-8”};
+	//控制器
+	$c=$-GET{'C'};
+	//包含控制器
+	include './controllers/'.$c.'Controller.php'；
+	//实例化控制器对象
+	$className=$c.'Controller';
+	$controller=new $className{};
+	//方法名
+	$a=$_GET{'a'};
+	//调用方法
+	$controller->$a{};
+	
+	
+	
+	
+controller文件(./controller/UserController.php)
+<?php
+	class UserController{
+		public function index(){
+		Controller内容
+		//获取model数据
+		include './models/UserModel.php';
+		$model=new UserModel();
+		//通过模型，获取数据
+		$list=$model->getAllUsers();
+		//调用view文件
+		include './view/User/index.html' //入口文件起
+		
+		}
+	}
+	
+	
+	
+view文件(./view/User/index.html)
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	view内容
+	<?
+		var_dump($list);
+	?>
+</body>
+</html>
+
+
+
+models文件(./models/UserModel.php)
+<?php
+	class UserModel{
+		//获取所有用户数据
+		public function getAllUsers(){
+			$list =array(
+				array{'id'->1,'name'->'jack','email'->'jack@gmail.com'},
+				array{'id'->2,'name'->'mary','email'->'mary@gmail.com'},
+				array{'id'->3,'name'->'lili','email'->'lili@gmail.com'},
+			);
+			return $list
+		}
+	}
+	
+	
+	
+	
+	
+入口文件：被浏览器访问的直接窗口
+控制器：协调模型和视图
+模型：提供、保存、审查数据
+视图：展示表单……
